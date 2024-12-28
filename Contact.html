@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
+  
   <title>Fisen Research & Development</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
@@ -26,16 +27,46 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+   <!-- EmailJS Integration Script -->
+   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+   <!-- EmailJS Integration Script -->
+ 
+   <script>
+     document.addEventListener('DOMContentLoaded', function () {
+       emailjs.init("Ilp0bA_nIazoFJGd-"); // Your public key
+ 
+       // Function to send the form email
+       window.sendEmail = function (event) {
+         event.preventDefault(); // Prevent default form submission
+         document.querySelector('.loading').style.display = 'block'; // Show loading spinner
+ 
+         emailjs.sendForm('service_nax75cl', 'template_2sb2kkc', document.getElementById('contactForm'))
+           .then(function (response) {
+             console.log('SUCCESS!', response.status, response.text);
+             document.querySelector('.loading').style.display = 'none'; // Hide loading spinner
+             document.querySelector('.sent-message').style.display = 'block'; // Show success message
+             document.querySelector('.error-message').style.display = 'none'; // Hide error message
+             document.getElementById('contactForm').reset(); // Reset the form
+           }, function (error) {
+             console.error('FAILED...', error);
+             document.querySelector('.loading').style.display = 'none'; // Hide loading spinner
+             document.querySelector('.sent-message').style.display = 'none'; // Hide success message
+             document.querySelector('.error-message').style.display = 'block'; // Show error message
+           });
+       };
+     });
+   </script>
+
 </head>
 
 <body>
 
-    <!-- ======= Header ======= -->
+  <!-- ======= Header ======= -->
   <header id="header" class="fixed-top d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo"><img src="assets/img/f logo.png" alt="" class="img-fluid"></a>
+      <a href="peak-power-pv.html" class="logo"><img src="assets/img/f logo.png" alt="" class="img-fluid"></a>
 
-      <h1 class="logo"><a href="index.html"> FISEN R&D</a></h1>
+      <h1 class="logo"><a href="peak-power-pv.html"> FISEN R&D</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <nav id="navbar" class="navbar">
         <ul>
@@ -56,147 +87,91 @@
       </li>
           <li><a class="nav-link scrollto" href="index.html#services">Services</a></li>
           <li><a class="nav-link scrollto " href="index.html#Study">study</a></li>
-          <!-- <li><a class="nav-link scrollto" href="Director-message.html">Director Message</a></li> -->
-          <li><a class="getstarted scrollto" href="Contact.html"s>Contact Us</a></li>
+          <li><a class="getstarted scrollto" href="Contact.html">Contact Us</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
     </div>
   </header><!-- End Header -->
-  <main class="main">
 
-    <!-- Page Title -->
-    <div class="page-title" data-aos="fade">
-        <div class="heading">
-            <div class="container">
-                <div class="row d-flex justify-content-center text-center">
-                    <div class="col-lg-8">
-                        <h1>Solar PV Based Deep Well Water Pump Solutions</h1>
-                        <p class="mb-0">Explore our Solar WellPump Solutions for reliable, sustainable water pumping
-                            powered by solar energy, ensuring efficiency and cost-effectiveness in remote locations.
-                        </p>
-                    </div>
-                </div>
+  <main id="main">
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+          <section class="services-section">
+            <h2 class="services-heading" style="margin-top: 70px;">CONTACT US</h2>
+            <hr>
+          </section>
+  
+          <div class="row contact-info">
+            <div class="col-md-4">
+              <div class="contact-address">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3562.1852893360896!2d78.07586621504732!3d27.916826982717175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3974a4fd26dd1d43%3A0xd9a2051896598258!2sCentre%20of%20Advanced%20Research%20in%20Electrified%20Transportation%20(CARET)!5e0!3m2!1sen!2sin!4v1694968227069!5m2!1sen!2sin"
+                  width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+              </div>
             </div>
-        </div>
-        <nav class="breadcrumbs">
-            <div class="container">
-                <ol>
-                    <li><a href="index.html">Home</a></li>
-                    <li class="current">Product Details</li>
-                </ol>
+  
+            <div class="col-md-4">
+              <div class="contact-phone">
+                <i class="bi bi-phone"></i>
+                <h3>Phone Number</h3>
+                <p><a href="tel:+155895548855">+91 781 798 8434</a></p>
+              </div>
             </div>
-        </nav>
-    </div><!-- End Page Title -->
-
-    <!-- Portfolio Details Section -->
-    <section id="portfolio-details" class="portfolio-details section">
-
-        <div class="container" data-aos="fade-up">
-
-            <div class="portfolio-details-slider swiper init-swiper">
-                <script type="application/json" class="swiper-config">
-        {
-          "loop": true,
-          "speed": 600,
-          "autoplay": {
-            "delay": 5000
-          },
-          "slidesPerView": "auto",
-          "navigation": {
-            "nextEl": ".swiper-button-next",
-            "prevEl": ".swiper-button-prev"
-          },
-          "pagination": {
-            "el": ".swiper-pagination",
-            "type": "bullets",
-            "clickable": true
-          }
-        }
-      </script>
-                <div class="swiper-wrapper align-items-center">
-
-                    
-                    <div class="swiper-slide">
-                        <img src="assets/img/solarinner.jpeg" alt="">
-                    </div>
-
-                </div>
-                <!-- <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div> -->
-                <div class="swiper-pagination"></div>
+  
+            <div class="col-md-4">
+              <div class="contact-email">
+                <i class="bi bi-envelope"></i>
+                <h3>Email</h3>
+                <p><a href="mailto:info@example.com">fisenrnd@gmail.com</a></p>
+              </div>
             </div>
-
-            <div class="row justify-content-between gy-4 mt-4">
-
-                <div class="col-lg-8" data-aos="fade-up">
-                  <div class="portfolio-description">
-                    <h2><strong style="font-weight: 600;">Solar PV Based Deep Well Water Pumps.</strong></h2>
-                    <p>
-                      Harness the solar power to meet your water pumping needs with our Solar PV Based
-                      Deep Well Water Pumps. Engineered for efficiency and reliability, our pumps utilize
-                      solar energy to deliver water from deep wells in all weather conditions, even at low insolation.<br> 
-                      
-                    </p>
-                    <p>
-                      <strong>Key fetures:</strong><br>
-                      <strong>Efficient Solar Power Utilization:</strong> Our system efficiently converts solar energy into
-                      mechanical energy to pump water from deep wells, providing a sustainable and
-                      cost-effective solution, even at low solar insolation.
-                    </p>
-                    <p>
-                      <strong>Reliable Performance:</strong> Designed for durability and resilience, our pumps operate
-                      seamlessly in various environmental conditions, ensuring consistent water supply with
-                      minimal maintenance.
-                    </p>
-                    <p>
-                      <strong>Versatile Applications:</strong> Ideal for agricultural, residential, and industrial use, our
-                      Solar PV Based Deep Well Water Pumps offer versatility to meet diverse water pumping
-                      requirements.
-                    </p>
-                    <p>
-                      <strong>Off-Grid Capability:</strong> Enable water access without reliance on external
-                      power sources, promoting self-sufficiency and reducing operational costs.
-                    </p>
-                    <p>
-                      <strong>Environmental Benefits:</strong> By leveraging solar energy, our pumps contribute to reducing
-                      carbon emissions and environmental impact compared to traditional diesel-powered pumps.
-                    </p>
-                    <p>
-                      Transform your water management with our Solar PV Based Deep Well Water Pumps, providing
-                      reliable and sustainable water pumping solutions. Contact us today to learn how our
-                      innovative pumps can enhance efficiency and sustainability for your water supply needs.
-                    </p>
-                  </div>
-                  
+          </div>
+  
+          <!-- Contact Form -->
+          <div class="form">
+            <form id="contactForm" role="form" class="php-email-form" method="POST" onsubmit="sendEmail(event)">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                  <div class="error" id="nameError" style="color: red;"></div>
                 </div>
-
-                <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
-                    <div class="portfolio-info">
-                        <h3>Specification</h3>
-                        <ul>
-                            <li><strong>Special Fetures</strong> Be good in remote areas( without electricity)</li>
-                            <li><strong>Model number</strong> 072024</li>
-                            <li><strong>Voltage</strong> 24-48V DC</li>
-                            <li><strong>Frequency</strong>50Hz</li>
-                            <li><strong>Rating</strong>custom built</li>
-                            <li><strong>Manufacturing year</strong> 2023</li>
-                           
-                            <hr>
-                           </ul>
-                    </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                  <div class="error" id="emailError" style="color: red;"></div>
                 </div>
-
-            </div>
-
-        </div>
-
-    </section><!-- /Portfolio Details Section -->
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                <div class="error" id="subjectError" style="color: red;"></div>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="5" id="message" placeholder="Message"
+                  required></textarea>
+                <div class="error" id="messageError" style="color: red;"></div>
+              </div>
+              <div class="my-3">
+                <div class="loading" style="display:none;">Loading...</div>
+                <div class="sent-message" style="color: green; display:none;">Your message has been
+                  sent successfully !</div>
+                <!-- <div class="error-message" style="color: red; display:none;">Failed to send the message.
+                                    Please try again later.</div> -->
+              </div>
+              <div class="text-center"><button type="submit" style="margin-bottom: 60px;">Send Message</button></div>
+            </form>
+          </div>
+  
+      </section>
+  
+  
+    </main><!-- End #main -->
 
 </main>
 
-   <!-- ======= Footer ======= -->
+ <!-- ======= Footer ======= -->
  <footer id="footer">
   <div class="footer-top">
     <div class="container">
@@ -216,7 +191,7 @@
               411048 .<br>
               <br>
             <h4>Contact Us</h4>
-            <strong>Phone:</strong> +91 781 798 8434<br>
+            <strong>Phone:</strong>+91 781 798 8434<br>
             <strong>Email:</strong> fisenrnd@gmail.com<br>
             </p>
           </div>
